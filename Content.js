@@ -167,16 +167,25 @@ body {
     `
 }
 
-switch(window.location.hostname){
-    case "www.youtube.com":
-        document.head.innerHTML = blockerHomepageStyling();
-        document.body.innerHTML = blockerHomepage("YOUTUBE")
-    case "www.facebook.com":
-        alert("NO");
-    case "www.twitter.com":
-        alert("NO");
-    case "www.instagram.com":
-        alert("NO");
-    case "www.netflix.com":
-        alert("NO");
-}
+switch (window.location.hostname) {
+	case "www.youtube.com":
+	  sendTextMessage("Disallowed website: YouTube");
+	  break;
+	case "www.facebook.com":
+	  sendTextMessage("Disallowed website: Facebook");
+	  break;
+	case "www.twitter.com":
+	  sendTextMessage("Disallowed website: Twitter");
+	  break;
+	case "www.instagram.com":
+	  sendTextMessage("Disallowed website: Instagram");
+	  break;
+	case "www.netflix.com":
+	  sendTextMessage("Disallowed website: Netflix");
+	  break;
+  }
+  
+  function sendTextMessage(message) {
+	
+  }
+  
